@@ -53,20 +53,20 @@ The output is a single **triage dashboard** that prioritizes casualties by sever
 
 ---
 
-## 🏆 Smart India Hackathon 2025 — PS25134
+## 🎬 Project Pitch
 
 <div align="center">
   <a href="https://youtu.be/E7XxPrKFcic?si=nFSgzKHWvBkNNUuz">
-    <img src="https://img.youtube.com/vi/E7XxPrKFcic/0.jpg" alt="SIH 2025 PS25134 Team M3OW" width="720">
+    <img src="https://img.youtube.com/vi/E7XxPrKFcic/0.jpg" alt="Team M3OW — UAV Triage System Pitch" width="720">
   </a>
   <br>
-  <em>SIH 2025 | PS25134 | Student Innovation — Robotics &amp; Drones | TEAM M3OW</em>
+  <em>TEAM M3OW — UAV Triage System | Robotics &amp; Drones</em>
 </div>
 
 <details>
 <summary>Watch on YouTube</summary>
 
-[![SIH 2025 PS25134](https://img.shields.io/badge/YouTube-Watch%20Full%20Pitch-red?logo=youtube)](https://youtu.be/E7XxPrKFcic?si=nFSgzKHWvBkNNUuz)
+[![Watch Full Pitch](https://img.shields.io/badge/YouTube-Watch%20Full%20Pitch-red?logo=youtube)](https://youtu.be/E7XxPrKFcic?si=nFSgzKHWvBkNNUuz)
 
 </details>
 
