@@ -77,7 +77,7 @@ The output is a single **triage dashboard** that prioritizes casualties by sever
     <img src="https://img.youtube.com/vi/lw-OaKTZjio/0.jpg" alt="SanjeevniUAV Demo Run" width="720">
   </a>
   <br>
-  <em>PS25134 - SanjeevniUAV Demo Run</em>
+  <em> Demo Run</em>
 </div>
 
 <details>
