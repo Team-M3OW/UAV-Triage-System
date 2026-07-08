@@ -4,6 +4,25 @@ Autonomous casualty triage system using UAVs. Integrates terrain-aware path plan
 
 ---
 
+## Demo
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=lw-OaKTZjio&list=PL6I2U3jEFWEUMN6iADnyaCkueP5Ci3630&index=2">
+    <img src="https://img.youtube.com/vi/lw-OaKTZjio/0.jpg" alt="SanjeevniUAV Demo Run" width="720">
+  </a>
+  <br>
+  <em>PS25134 - SanjeevniUAV Demo Run</em>
+</div>
+
+<details>
+<summary>Watch on YouTube</summary>
+
+[![SanjeevniUAV Demo](https://img.shields.io/badge/YouTube-Watch%20Video-red?logo=youtube)](https://www.youtube.com/watch?v=lw-OaKTZjio&list=PL6I2U3jEFWEUMN6iADnyaCkueP5Ci3630&index=2)
+
+</details>
+
+---
+
 ## System Architecture
 
 ```mermaid
