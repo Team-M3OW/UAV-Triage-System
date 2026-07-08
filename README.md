@@ -468,6 +468,3 @@ graph LR
 
 ---
 
-## License
-
-MIT (AllTracker components). See individual licenses in source files.
