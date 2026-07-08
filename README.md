@@ -1,6 +1,55 @@
-# UAV Triage System
+<div align="center">
 
-Autonomous casualty triage system using UAVs. Integrates terrain-aware path planning, AI-powered trauma assessment, and motion-based seizure detection into a single deployable pipeline.
+# 🛰️ UAV Triage System
+
+### Autonomous Multi-Modal Casualty Triage via Unmanned Aerial Vehicles
+
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![CUDA](https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-toolkit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![UAV](https://img.shields.io/badge/UAV-Platform-00B4D8)](#)
+
+</div>
+
+---
+
+## The Problem
+
+Disaster zones are chaotic. After earthquakes, floods, or armed conflicts, casualties are scattered across terrain that is often **inaccessible by ground vehicles** — collapsed bridges, flooded roads, landslides, or active combat zones. The golden hour for trauma treatment is critical: every minute of delay increases mortality by approximately 7%.
+
+Traditional triage requires **human medics on the ground** to physically reach each casualty, assess their condition, and manually coordinate evacuation routes. This is slow, dangerous, and doesn't scale when hundreds of casualties are spread across a large area.
+
+**What if a fleet of UAVs could do the first mile of triage autonomously?**
+
+## The Idea
+
+UAV Triage System is an end-to-end autonomous pipeline that takes a fleet of camera-equipped drones and turns them into **force multipliers for disaster response**. The system handles the full loop — from the moment a UAV spots a casualty to generating an actionable triage report and optimal rescue routes:
+
+1. **See** — YOLOv8-segmentation detects and isolates human figures from the UAV's live video feed, filtering out debris, vehicles, and terrain noise.
+
+2. **Track** — AllTracker (ICCV 2025) runs dense point tracking on every detected person, computing per-pixel motion trajectories across the entire video sequence. Unlike simple bounding-box trackers, this captures the **fine-grained kinematics** of each casualty's body.
+
+3. **Classify Motion** — A sliding-window directness ratio classifier analyzes each tracked point's trajectory to distinguish between:
+   - **Walking** (smooth, purposeful movement — mobile casualty)
+   - **Twitching** (high-frequency, non-directional oscillation — seizure, neurogenic shock, or agonal breathing)
+   - **No Movement** (stationary — unconscious or deceased)
+   - **General Movement** (spinning, erratic — disoriented)
+
+4. **Assess Trauma** — For each casualty, cropped video frames are fed into LongVILA-R1-7B, a vision-language model that generates structured JSON trauma reports classifying wounds, amputations, burns, fractures, and respiratory/hemorrhage status across 8 body regions.
+
+5. **Route Rescue** — A Dijkstra-based path planner computes terrain-optimal routes from the NDRF base to each casualty location on a Digital Elevation Model, penalizing steep slopes and rough terrain to find the **smoothest, fastest path** for ground teams.
+
+The output is a single **triage dashboard** that prioritizes casualties by severity, provides AI-generated trauma assessments, and hands rescue teams GPS-guided optimal routes — all without a single human stepping into the danger zone.
+
+## Why This Matters
+
+- **Speed**: Triage reports generated in seconds, not minutes per casualty
+- **Scale**: One operator can deploy a fleet covering an area that would need dozens of ground teams
+- **Safety**: Assessment happens remotely — no medic exposure to collapsed structures, flooding, or hostile environments
+- **Accuracy**: VLM-based assessment provides consistent, structured reports free from human fatigue or stress-induced errors
+- **Actionable Output**: Not just classification — the system outputs routes that rescue teams can follow immediately
 
 ---
 
