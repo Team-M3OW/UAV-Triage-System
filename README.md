@@ -53,7 +53,26 @@ The output is a single **triage dashboard** that prioritizes casualties by sever
 
 ---
 
-## Demo
+## 🏆 Smart India Hackathon 2025 — PS25134
+
+<div align="center">
+  <a href="https://youtu.be/E7XxPrKFcic?si=nFSgzKHWvBkNNUuz">
+    <img src="https://img.youtube.com/vi/E7XxPrKFcic/0.jpg" alt="SIH 2025 PS25134 Team M3OW" width="720">
+  </a>
+  <br>
+  <em>SIH 2025 | PS25134 | Student Innovation — Robotics &amp; Drones | TEAM M3OW</em>
+</div>
+
+<details>
+<summary>Watch on YouTube</summary>
+
+[![SIH 2025 PS25134](https://img.shields.io/badge/YouTube-Watch%20Full%20Pitch-red?logo=youtube)](https://youtu.be/E7XxPrKFcic?si=nFSgzKHWvBkNNUuz)
+
+</details>
+
+---
+
+## Demo Run
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=lw-OaKTZjio&list=PL6I2U3jEFWEUMN6iADnyaCkueP5Ci3630&index=2">
