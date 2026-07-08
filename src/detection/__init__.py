@@ -1,0 +1,1 @@
+from src.detection.sliding_window import compute_motion_metrics, plot_motion_analysis

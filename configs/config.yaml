@@ -1,0 +1,32 @@
+model:
+  name: alltracker
+  window_len: 16
+  inference_iters: 4
+
+training:
+  stage1:
+    batch_size: 2
+    learning_rate: 4e-4
+    num_steps: 200000
+    gpus: 2
+  stage2:
+    batch_size: 2
+    learning_rate: 1e-4
+    num_steps: 400000
+    gpus: 2
+
+detection:
+  sliding_window:
+    window_size: 15
+    step_size: 5
+    thresh_max_dr_twitch: 10.0
+    thresh_mean_dr_walk: 2.5
+    thresh_path_nomove: 10.0
+
+trauma:
+  model_path: "Efficient-Large-Model/LongVILA-R1-7B"
+  num_frames: 8
+
+output:
+  results_dir: "results"
+  logs_dir: "logs"

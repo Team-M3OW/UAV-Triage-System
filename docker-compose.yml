@@ -1,0 +1,55 @@
+services:
+  detection:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./output:/app/output
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      python3 -m src.detection.demo
+      --mp4_path /app/data/input.mp4
+      --output_dir /app/output
+
+  pathfinding:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: pathfinding
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    command: >
+      python3 -m src.pathfinding.raster_planner
+      --dem /app/data/dem.tif
+      --cost /app/data/cost.tif
+      --output /app/output
+
+  trauma:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: trauma
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./output:/app/output
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      python3 -m src.trauma.trauma_assessor
+      --video_dir /app/data/videos
+      --output /app/output/reports.csv
