@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛰️ UAV Triage System
+#  UAV Triage System
 
 ### Autonomous Multi-Modal Casualty Triage via Unmanned Aerial Vehicles
 
